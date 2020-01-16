@@ -7,7 +7,7 @@
   <author email="john@example.org">
     ebrainzone
   </author>
-  <preference name="EnableDeveloperConsole" value="$IS_DEBUG" />
+  <preference name="EnableDeveloperConsole" value="$false" />
     <preference name="orientation" value="portrait"/>
 	
     <platform name="android">
@@ -15,18 +15,7 @@
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.CAMERA"/>
             <uses-feature android:name="android.hardware.camera" android:required="false"/>
-            <uses-feature android:name="android.hardware.camera.autofocus"/>
-            <base-config cleartextTrafficPermitted="false"/>
         </config-file>
-
-        <activity
-                android:name=".MainActivity"
-                android:windowSoftInputMode="adjustPan"  >
-        </activity>
     </platform>
 
-    <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
-        <application android:usesCleartextTraffic="true" />
-    </edit-config>
-	
 </widget>
