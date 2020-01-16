@@ -80,7 +80,7 @@ var string10 = new tabris_1.TextView({ top: 990 + toppixel, left: 150, text: '�
 //
 let Heart = new HeartSutra(bg, "經文內容", "images/tree1.jpg");
 // 頂部空間 (最後生成才可遮蓋住)
-var TopSpace = new tabris_1.ImageView({ id: 'topspace', top: 0, centerX: 0, height: 52, image: 'images/topspace2.jpg' })
+var TopSpace = new tabris_1.ImageView({ id: 'topspace', top: 0, centerX: 0, height: 52, scaleMode: 'fill', image: 'images/topspace2.jpg' })
     .appendTo(bg);
 // 大中小按鈕
 var btnFontLarge = new tabris_1.ToggleButton({ right: 130, top: 6, textColor: 'red', width: 50, text: '大' })
@@ -95,6 +95,7 @@ var btnFontSmall = new tabris_1.ToggleButton({ right: 10, top: 6, textColor: 'bl
 goStart();
 function goStart() {
     btnFontSmall.checked = true;
+    console.log("TopSpace.ImageView.scaleMode: " + TopSpace.scaleMode);
 }
 function ChangeFontSize(size) {
     switch (size) {

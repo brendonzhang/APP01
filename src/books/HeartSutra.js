@@ -54,8 +54,8 @@ module.exports = class HeartSutra {
 	showWindow () {
 		this.el.visible = true;
 		
-	console.log("bgpicture.ImageView.scaleMode: "+bgpicture.scaleMode);
-		console.log("HeartSutra: ":this.el);
+	console.log("bgpicture.ImageView.scaleMode: "+this.bgpicture.scaleMode);
+		console.log("HeartSutra: "+this.el);
 	}
 	
 //	showlayout() {

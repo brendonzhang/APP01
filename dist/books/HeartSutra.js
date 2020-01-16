@@ -18,7 +18,7 @@ module.exports = class HeartSutra {
         this.btn = new Button({ right: 10, bottom: 10, text: '返回' })
             .onSelect(() => this.hideWindow())
             .appendTo(this.el);
-        this.bgpicture = new ImageView({ left: 0, top: 0, image: this.diaplayBgPicture })
+        this.bgpicture = new ImageView({ left: 0, top: 0, scaleMode: 'fill', image: this.diaplayBgPicture })
             .appendTo(this.el);
         this.bgbuler = new Composite({ left: 0, top: 0, right: 0, bottom: 0, background: 'rgba(0, 0, 0, 0.6)' })
             .appendTo(this.el);
@@ -39,7 +39,8 @@ module.exports = class HeartSutra {
     }
     showWindow() {
         this.el.visible = true;
-        //		console.log(this.el);
+        console.log("bgpicture.ImageView.scaleMode: " + this.bgpicture.scaleMode);
+        console.log("HeartSutra: " + this.el);
     }
     //	showlayout() {
     //        this.showWindow();

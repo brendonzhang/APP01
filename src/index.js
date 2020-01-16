@@ -130,7 +130,7 @@ goStart();
 
 function goStart() {
 	btnFontSmall.checked  = true;
-	console.log("btnFontMiddle.ImageView.scaleMode"+btnFontMiddle.scaleMode);
+	console.log("TopSpace.ImageView.scaleMode: "+TopSpace.scaleMode);
 }
 
 function ChangeFontSize(size) {
