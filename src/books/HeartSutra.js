@@ -25,7 +25,7 @@ module.exports = class HeartSutra {
 			.onSelect( () => this.hideWindow() )
 			.appendTo(this.el);
 			
-		this.bgpicture = new ImageView({left: 0, top: 0, image: this.diaplayBgPicture})
+		this.bgpicture = new ImageView({left: 0, top: 0, scaleMode:fill, image: this.diaplayBgPicture})
 			.appendTo(this.el);
 		
 		this.bgbuler = new Composite({left: 0, top: 0, right: 0, bottom: 0,background: 'rgba(0, 0, 0, 0.6)'})
