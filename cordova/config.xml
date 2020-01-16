@@ -9,17 +9,25 @@
   </author>
   <preference name="EnableDeveloperConsole" value="$IS_DEBUG" />
     <preference name="orientation" value="landscape"/>
+	
     <platform name="android">
+        <preference name="Fullscreen" value="true" />
         <config-file parent="/*" target="AndroidManifest.xml" mode="merge">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.CAMERA"/>
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-            <uses-feature android:name="android.hardware.camera" android:required="true"/>
+            <uses-feature android:name="android.hardware.camera" android:required="false"/>
             <uses-feature android:name="android.hardware.camera.autofocus"/>
-            <base-config cleartextTrafficPermitted="true"/>
+            <base-config cleartextTrafficPermitted="false"/>
         </config-file>
+
+        <activity
+                android:name=".MainActivity"
+                android:windowSoftInputMode="adjustPan"  >
+        </activity>
     </platform>
+
     <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
         <application android:usesCleartextTraffic="true" />
     </edit-config>
+	
 </widget>
