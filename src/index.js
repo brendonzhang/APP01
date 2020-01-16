@@ -111,7 +111,7 @@
 	let Heart = new HeartSutra( bg ,"經文內容","images/tree1.jpg");
 
 	// 頂部空間 (最後生成才可遮蓋住)
-	var TopSpace = new ImageView({id:'topspace',top:0, centerX:0, height:52, scaleMode:fill, image: 'images/topspace2.jpg'})
+	var TopSpace = new ImageView({id:'topspace',top:0, centerX:0, height:52, scaleMode:'fill', image: 'images/topspace2.jpg'})
 		.appendTo(bg);
 		
 	// 大中小按鈕
@@ -130,6 +130,7 @@ goStart();
 
 function goStart() {
 	btnFontSmall.checked  = true;
+	console.log("btnFontMiddle.ImageView.scaleMode"+btnFontMiddle.scaleMode);
 }
 
 function ChangeFontSize(size) {
