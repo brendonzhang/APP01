@@ -8,10 +8,9 @@
     ebrainzone
   </author>
   <preference name="EnableDeveloperConsole" value="$IS_DEBUG" />
-    <preference name="orientation" value="landscape"/>
+    <preference name="orientation" value="portrait"/>
 	
     <platform name="android">
-        <preference name="Fullscreen" value="true" />
         <config-file parent="/*" target="AndroidManifest.xml" mode="merge">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.CAMERA"/>
